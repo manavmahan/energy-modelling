@@ -1,0 +1,16 @@
+[Unit]
+Description= Energy Modelling App
+
+[Service]
+Type = simple
+WorkingDirectory=/home/ubuntu/repos/energy-modelling
+ExecStart=npm start
+User = ubuntu
+Group = ubuntu
+Restart = always # Restart when there are errors
+SyslogIdentifier = ip
+RestartSec = 5
+TimeoutStartSec = infinity
+
+[Install]
+WantedBy=multi-user.target
