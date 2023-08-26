@@ -25,7 +25,7 @@ export default function RootLayout({
         <Suspense fallback="...">
           <TopNavigation />
         </Suspense>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center px-32">
+        <main className="flex min-h-screen flex-col items-center justify-center">
           <Providers>
             {children}
           </Providers>

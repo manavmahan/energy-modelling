@@ -49,7 +49,7 @@ export default function ProjectButtons(setFunc, ){
             )
         });
         props.push (
-            <div className='flex w-full' key={k} color="danger">
+            <div className='inline-block' key={k} color="danger">
                 {currentProps}
             </div>
         )
