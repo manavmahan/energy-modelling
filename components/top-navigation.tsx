@@ -6,7 +6,10 @@ import Link from 'next/link'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faM } from "@fortawesome/free-solid-svg-icons";
-import { URLS } from "../functions/constants";
+import { URLS } from "@/functions/constants";
+
+import LoginButton from "@/components/login-button.jsx";
+import { SessionProvider } from "next-auth/react";
 
 export function TopNavigation(){
     return (
@@ -26,14 +29,9 @@ export function TopNavigation(){
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
-          {/* <NavbarItem className="hidden lg:flex">
-            <Link href="#">Login</Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
-              Sign Up
-            </Button>
-          </NavbarItem> */}
+          <SessionProvider>
+            <LoginButton />
+          </SessionProvider>
         </NavbarContent>
       </Navbar>
     );
