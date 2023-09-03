@@ -2,7 +2,6 @@ import axios from 'axios';
 import { DB_VARIABLES } from './constants';
 const URL = 'https://energy.manavmahan.de/api/database'
 
-
 function isSuccess(data, setFormData){
     if (data.ERROR){
       console.log(data.ERROR, data.QUERY);
